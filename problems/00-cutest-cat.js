@@ -5,18 +5,18 @@ rating.
 */
 
 function cutestCat(cats) {
-  let cutest;
-  let i = 0;
-
+  let cutest = cats[0];
+let i = 0;
   while (i < cats.length) {
-    const cat = cats[i];
-    if (cat > cutest) {
+    let cat = cats[i];
+    if (cat.cuteness > cutest.cuteness) {
       cutest = cat.cuteness;
+      cutest = cat;
     }
     i++;
   }
 
-  return cutest;
+  return cutest.name;
 }
 
 const cats = [
